@@ -1,7 +1,7 @@
 #!/bin/bash
 
 #VARIABLES
-serv="asgard"
+serv="machine"
 mountCommand=""
 mountPoint="/srv/backup"
 cheminLog="/root/logs"

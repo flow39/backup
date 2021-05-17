@@ -7,6 +7,8 @@ sqlHost="localhost"
 #date du jour
 date=`date +%y-%m-%d_%H:%M`
 
+serv=""
+
 #répertoire de sauvegarde
 mountPoint="/srv/backup/databases/"
 
@@ -41,5 +43,5 @@ find ${mountPoint} -name "*.gz" -mtime +$retention -print -exec rm {} \;
 
 #rapport
 echo Rapport envoyé à $date
-echo 'Subject:' "BACKUP SQL" | cat - "$cheminLog/backup-asgard-mysql.log" | sendmail -r $mailExpe $mailDest
+echo 'Subject:' "BACKUP SQL $serv" | cat - "$cheminLog/backup-$serv-mysql.log" | sendmail -r $mailExpe $mailDest
 
