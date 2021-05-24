@@ -38,8 +38,9 @@ done
 
 echo backup terminé @ $date
 
+#on échappe pas le ; à la fin de la commande car ce script est appelé dans une variable par le script exeBackup
 echo "Suppression des backups de plus de 6 jours : "
-find ${mountPoint} -name "*.gz" -mtime +$retention -print -exec rm {} \;
+find ${mountPoint} -name "*.gz" -mtime +$retention -print -exec rm {} ;
 
 #rapport
 echo Rapport envoyé à $date
