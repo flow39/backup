@@ -1,4 +1,5 @@
 #!/bin/bash
+PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
 mountPoint="/srv/backup"
 mountCommand=""
 backupCommand="/root/scripts/./backup.sh &> /root/logs/backup-asgard.log"
