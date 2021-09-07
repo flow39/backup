@@ -1,15 +1,7 @@
 #!/bin/bash
 
-#VARIABLES
-serv="machine"
-mountCommand=""
-mountPoint="/srv/backup"
-cheminLog="/root/logs"
-dossierCible="/var/www/html"
-dossierCible1="/etc/apache2/sites-available"
-sendmail="sendmail"
-mailEnvoi="backup@machine.local"
-mailDestinataire="toto@toto.com"
+. config.sh
+
 rsyncCommand="rsync -rlptD"
 rsyncOpt="--delete-after"
 
