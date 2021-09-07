@@ -20,5 +20,5 @@ find ${mountPointMysql} -name "*.gz" -mtime +$retention -print -exec rm {} ;
 
 #rapport
 echo Rapport envoyé à $date
-echo 'Subject:' "BACKUP SQL $serv" | cat - "$cheminLog/backup-$serv-mysql.log" | sendmail -r $mailExpe $mailDest
+echo 'Subject:' "BACKUP SQL $serv" | cat - "$cheminLog/backup-$serv-mysql.log" | sendmail -r $mailEnvoi $mailDestinataire
 
