@@ -9,7 +9,7 @@ rsyncOpt="--delete-after"
 
 echo --- BACKUP $dossierCible ---
 echo début de la synchronisation @ $(date +%d-%m-%y_%H:%M)
-eval $rsyncCommand $dossierCible $mountPoint $rsyncOpt
+eval $rsyncCommand $rsyncOpt $dossierCible $mountPoint 
 echo Synchronisation du dossier cible $dossierCible terminée à $(date +%H:%M)
 echo --- BACKUP $dossierCible1 ---
 echo début de la synchronisation @ $(date +%d-%m-%y_%H:%M)
