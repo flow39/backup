@@ -14,7 +14,7 @@ echo début de la synchronisation @ $(date +%d-%m-%y_%H:%M)
 eval $rsyncCommand $dossierCible1 $mountPoint $rsyncOpt
 echo Synchronisation du dossier cible $dossierCible1 terminée à $(date +%H:%M)
 
-du -h $mountPoint
+du -sh $mountPoint
 
 #RAPPORT
 echo Rapport envoyé @ $(date +%d-%m-%y_%H:%M)
