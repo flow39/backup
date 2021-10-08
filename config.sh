@@ -2,6 +2,7 @@
 serv="machine"
 mountCommand=""
 mountPoint="/srv/backup"
+mountPointMysql="/srv/backup/databases/"
 cheminLog="/root/logs"
 dossierCible="/var/www/html"
 dossierCible1="/etc/apache2/sites-available"
@@ -15,7 +16,6 @@ sqlHost="localhost"
 #date du jour
 date=`date +%y-%m-%d_%H:%M`
 #répertoire de sauvegarde
-mountPointMysql="/srv/backup/databases/"
 #durée de rétention
 retention=6
 #tables

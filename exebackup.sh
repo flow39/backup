@@ -1,8 +1,9 @@
 #!/bin/bash
+
+. config.sh
+
 PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-mountPoint="/srv/backup"
-mountCommand=""
-backupCommand="/root/backup/./backup.sh &> /root/logs/backup-asgard.log"
-backupSqlCommand="/root/backup/./backup_mysql.sh $> /root/logs/backup-asgard-mysql.log"
+backupCommand="/root/backup/./backup.sh &> /root/logs/backup-$serv.log"
+backupSqlCommand="/root/backup/./backup_mysql.sh $> /root/logs/backup-$serv-mysql.log"
 
 eval $mountCommand && eval $backupCommand && eval $backupSqlCommand && eval umount $mountPoint
